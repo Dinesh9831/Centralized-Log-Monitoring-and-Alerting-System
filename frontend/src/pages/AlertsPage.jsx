@@ -46,13 +46,13 @@ const AlertsPage = () => {
       ) : (
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {alerts.map((alert) => (
-            <div 
-              key={alert.id} 
+            <div
+              key={alert.id}
               className="bg-darkCard rounded-xl border border-red-500/30 overflow-hidden shadow-lg shadow-red-900/20 relative"
             >
               {/* Alert indicator pulse */}
               <div className="absolute top-0 right-0 w-2 h-2 mt-3 mr-3 rounded-full bg-red-500 animate-pulse"></div>
-              
+
               <div className="p-5">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="bg-red-500/10 p-2 rounded-lg text-red-500">
@@ -63,13 +63,13 @@ const AlertsPage = () => {
                     <p className="text-xs text-red-400 font-medium">Triggered by ERROR log</p>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-900/50 rounded p-3 mb-4 mt-2">
                   <p className="text-gray-300 font-mono text-sm break-words">
                     {alert.message}
                   </p>
                 </div>
-                
+
                 <div className="flex justify-between items-center text-xs text-gray-500 mt-4 pt-3 border-t border-gray-800">
                   <span>ID: {alert.id.slice(-6)}</span>
                   <span>{new Date(alert.timestamp).toLocaleTimeString()}</span>
