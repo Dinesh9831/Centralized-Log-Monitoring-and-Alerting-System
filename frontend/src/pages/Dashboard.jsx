@@ -7,7 +7,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/logs');
+        const res = await fetch('http://localhost:8081/api/logs');
         if (!res.ok) throw new Error('Network error');
         const logs = await res.json();
         

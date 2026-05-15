@@ -8,7 +8,7 @@ const AlertsPage = () => {
   useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/alerts');
+        const res = await fetch('http://localhost:8081/api/alerts');
         const data = await res.json();
         // Reverse to show newest alerts first
         setAlerts(data.reverse());

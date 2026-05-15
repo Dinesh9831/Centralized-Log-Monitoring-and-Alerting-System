@@ -9,7 +9,7 @@ const LogsPage = () => {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/logs');
+        const res = await fetch('http://localhost:8081/api/logs');
         const data = await res.json();
         // Reverse to show newest first
         setLogs(data.reverse());
